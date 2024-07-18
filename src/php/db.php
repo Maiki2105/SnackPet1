@@ -4,11 +4,11 @@ $username = "root";
 $password = "";
 $dbname = "snackpet";
 
-// Create connection
+// Crear conexión
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
+// Verificar conexión
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    die("Conexión fallida: " . $conn->connect_error);
 }
 ?>

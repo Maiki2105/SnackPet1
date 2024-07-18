@@ -1,5 +1,5 @@
 <?php
-include 'config.php';
+require 'db.php';
 
 $id = $_POST['id'];
 $nombre = $_POST['nombre'];
@@ -9,14 +9,11 @@ $telefono = $_POST['telefono'];
 
 $sql = "UPDATE usuarios SET nombre='$nombre', email='$email', direccion='$direccion', telefono='$telefono' WHERE id=$id";
 
-$response = array();
 if ($conn->query($sql) === TRUE) {
-    $response['success'] = true;
+    echo "Usuario actualizado exitosamente";
 } else {
-    $response['success'] = false;
+    echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
 $conn->close();
-
-echo json_encode($response);
 ?>

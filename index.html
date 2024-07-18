@@ -1,20 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>SnackPet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnackPet - Gestión de Usuarios</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1>SnackPet</h1>
+    <h1>SnackPet - Gestión de Usuarios</h1>
+
     <form id="usuarioForm">
-        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
-        <input type="email" id="email" name="email" placeholder="Email" required>
-        <input type="text" id="direccion" name="direccion" placeholder="Dirección" required>
-        <input type="text" id="telefono" name="telefono" placeholder="Teléfono" required>
-        <button type="submit">Agregar Usuario</button>
+        <input type="hidden" name="id" id="id">
+        <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+        <input type="email" name="email" id="email" placeholder="Email" required>
+        <input type="text" name="direccion" id="direccion" placeholder="Dirección" required>
+        <input type="text" name="telefono" id="telefono" placeholder="Teléfono" required>
+        <button type="submit">Guardar Usuario</button>
     </form>
+
     <div id="usuarios"></div>
-    <script src="js/app.js"></script>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
