@@ -8,14 +8,16 @@
 </head>
 <body>
     <header>
+
         <img src="../img/perros y gatos.png" alt="Logo" class="logo">
         <h1>SnackPet</h1>
+        
     </header>
     <div class="container">
         <h2>Login</h2>
-        <form id="loginForm">
+        <form id="loginForm" method="post" action="../php/login.php">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="text" id="email" name="email" placeholder="Ingrese su nombre de usuario o correo" required>
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
             <button type="submit">Login</button>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnackPet - Detalles del Producto</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Detalles del Producto</h1>
+    </header>
+
+    <section id="detalleProducto">
+        <!-- Aquí se mostrarán los detalles del producto -->
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const id = urlParams.get('id');
+
+            fetch(`../php/fetch_producto.php?id=${id}`)
+                .then(response => response.json())
+                .then(producto => {
+                    const detalleProducto = document.getElementById('detalleProducto');
+                    
+                    detalleProducto.innerHTML = `
+                        <img src="../images/${producto.imagen}" alt="${producto.nombre}">
+                        <h2>${producto.nombre}</h2>
+                        <p>${producto.descripcion}</p>
+                        <p>Precio: $${producto.precio}</p>
+                        <p>Categoría: ${producto.categoria}</p>
+                    `;
+                });
+        });
+    </script>
+</body>
+</html>

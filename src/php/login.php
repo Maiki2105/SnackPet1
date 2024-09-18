@@ -2,19 +2,23 @@
 include 'db.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $sql = 'SELECT * FROM usuarios WHERE email = ?';
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([$email]);
+    // Preparar consulta SQL para obtener el usuario por email
+    $sql = 'SELECT * FROM usuarios WHERE email = :email or nombre = :email'  ;
+    $stmt = $conn->prepare($sql);
+    $stmt->execute(['email' => $email]);
 
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    if ($user && password_verify($password, $user['password'])) {
-        echo json_encode(['success' => true]);
+    // Si se encontró el usuario, verificar la contraseña
+    if ($user && $user['password'] === $password) {
+        header("LOCATION:../views/index.html");
+        exit;
     } else {
-        echo json_encode(['success' => false, 'message' => 'Invalid credentials']);
+        echo "Correo o contraseña incorrectos.";
     }
 }
 ?>

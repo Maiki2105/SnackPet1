@@ -1,19 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SnackPet</title>
+    <title>SnackPet - Inicio</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <header>
-        <img src="../img/WhatsApp Image 2024-06-04 at 5.44.45 PM.jpeg" alt="Logo" class="logo">
-        <h1>Bienvenido a SnackPet</h1>
-    </header>
-    <div class="container">
-        <h2>Home</h2>
-        <p>Contenido de la página principal.</p>
-    </div>
+    <!-- Barra de Navegación -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="../img/WhatsApp Image 2024-06-04 at 5.44.45 PM.jpeg" alt="SnackPet Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">INICIO</a></li>
+            <li class="dropdown">
+                <a href="#">PERROS</a>
+                <ul class="dropdown-content">
+                    <li><a href="productos.html?category=Perros&subcategoria=Alimento%20Seco">ALIMENTO SECO</a></li>
+                    <li><a href="productos.html?category=Perros&subcategoria=Alimento%20Humedo">ALIMENTO HUMEDO</a></li>
+                    <li><a href="productos.html?category=Perros&subcategoria=Aseo%20y%20Belleza">ASEO Y BELLEZA</a></li>
+                    <li><a href="productos.html?category=Perros&subcategoria=Medicamento">MEDICAMENTO</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">GATOS</a>
+                <ul class="dropdown-content">
+                    <li><a href="productos.html?category=Gatos&subcategoria=Alimento%20Seco">ALIMENTO SECO</a></li>
+                    <li><a href="productos.html?category=Gatos&subcategoria=Alimento%20Humedo">ALIMENTO HUMEDO</a></li>
+                    <li><a href="productos.html?category=Gatos&subcategoria=Aseo%20y%20Belleza">ASEO Y BELLEZA</a></li>
+                    <li><a href="productos.html?category=Gatos&subcategoria=Medicamento">MEDICAMENTO</a></li>
+                </ul>
+            </li>
+            <li><a href="tienda.html">TIENDA</a></li>
+            <li><a href="servicios.html">SERVICIOS</a></li>
+            <li><a href="cuenta.html">CUENTA</a></li>
+            <li><a href="carrito.html">CARRITO</a></li>
+        </ul>
+    </nav>
+
+    <!-- Banner Principal -->
+    <!-- <section class="banner">
+        <img src="../images/banner.jpg" alt="Banner Principal">
+        <div class="banner-text">
+            <h1>Bienvenido a SnackPet</h1>
+            <p>Encuentra lo mejor para tus mascotas</p>
+            <a href="productos.html?category=Perros&subcategoria=Alimento%20Seco" class="btn-banner">Ver Productos para Perros</a>
+        </div>
+    </section> -->
+
+    <!-- Categorías Destacadas -->
+    <section class="categories">
+        <h2>Categorías Destacadas</h2>
+        <div class="category-grid">
+            <div class="category">
+                <a href="productos.html?category=Perros">
+                    <img src="../images/perros.jpg" alt="Perros">
+                    <h3>Perros</h3>
+                </a>
+            </div>
+            <div class="category">
+                <a href="productos.html?category=Gatos">
+                    <img src="../images/gatos.jpg" alt="Gatos">
+                    <h3>Gatos</h3>
+                </a>
+            </div>
+            <div class="category">
+                <a href="productos.html?category=Servicios">
+                    <img src="../images/servicios.jpg" alt="Servicios">
+                    <h3>Servicios</h3>
+                </a>
+            </div>
+            <div class="category">
+                <a href="tienda.html">
+                    <img src="../images/tienda.jpg" alt="Tienda">
+                    <h3>Tienda</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Productos Destacados -->
+    <section class="featured-products">
+        <h2>Productos Destacados</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="../images/comida_perros.jpg" alt="Comida para Perros">
+                <h3>Comida para Perros</h3>
+                <p>$19.99</p>
+                <a href="producto_detalle.html?id=1" class="btn-product">Ver Más</a>
+            </div>
+            <!-- Repite para otros productos destacados -->
+        </div>
+    </section>
+    
+    <!-- Ofertas Especiales -->
+    <section class="special-offers">
+        <h2>Ofertas Especiales</h2>
+        <div class="offer-grid">
+            <div class="offer-card">
+                <img src="../images/oferta_comida.jpg" alt="Oferta Comida para Perros">
+                <h3>Descuento en Comida para Perros</h3>
+                <p>¡Ahorra 20% en la compra de comida para perros!</p>
+                <a href="productos.html?category=Perros&subcategoria=Alimento%20Seco" class="btn-offer">Comprar Ahora</a>
+            </div>
+            <!-- Repite para otras ofertas -->
+        </div>
+    </section>
+
+    <!-- Testimonios de Clientes -->
+    <section class="testimonials">
+        <h2>Testimonios de Clientes</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial">
+                <p>"SnackPet tiene todo lo que necesito para mis mascotas. Excelente calidad y servicio."</p>
+                <h4>Juan Pérez</h4>
+            </div>
+            <!-- Repite para otros testimonios -->
+        </div>
+    </section>
+
+    <!-- Blog -->
+    <section class="blog">
+        <h2>Últimos Artículos</h2>
+        <div class="blog-grid">
+            <div class="blog-card">
+                <img src="../images/articulo_cuidado.jpg" alt="Cuidado de Mascotas">
+                <h3>Cómo Cuidar a tu Mascota en Invierno</h3>
+                <p>Consejos y trucos para mantener a tus mascotas felices y saludables durante el invierno.</p>
+                <a href="blog_post.html?id=1" class="btn-blog">Leer Más</a>
+            </div>
+            <!-- Repite para otros artículos -->
+        </div>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Inicio</a>
+                <a href="productos.html?category=Perros">Perros</a>
+                <a href="productos.html?category=Gatos">Gatos</a>
+                <a href="tienda.html">Tienda</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://facebook.com" target="_blank">Facebook</a>
+                <a href="https://twitter.com" target="_blank">Twitter</a>
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+            </div>
+            <p>&copy; 2024 SnackPet. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 </body>
 </html>
